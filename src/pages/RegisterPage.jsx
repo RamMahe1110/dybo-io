@@ -110,7 +110,10 @@ class RegisterPage extends Component {
     // Linkedin URL Validation
     if (
       !linkedinUrl.length ||
-      !validator.isURL(linkedinUrl, { protocols: ['https'] })
+      !validator.isURL(linkedinUrl, {
+        protocols: ['https'],
+        require_protocol: true,
+      })
     ) {
       isValid = false
       if (!linkedinUrl.length) {
