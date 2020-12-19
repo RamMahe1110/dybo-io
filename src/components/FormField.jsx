@@ -16,7 +16,9 @@ class FormField extends Component {
         <input
           onChange={onChange}
           style={{
-            backgroundColor: `${currPlaceColor}33`,
+            backgroundColor: `${
+              currPlaceColor === 'red' ? 'rgba(255,0,0,0.1)' : currPlaceColor + '33'
+            }`,
           }}
           placeholder={placeholder}
           className="form-input"
